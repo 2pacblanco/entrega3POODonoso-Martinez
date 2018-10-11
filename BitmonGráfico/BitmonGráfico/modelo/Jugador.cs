@@ -21,4 +21,4 @@ namespace BitmonGráfico.modelo
             this.id = id;
         }
     }
-    }
+}
