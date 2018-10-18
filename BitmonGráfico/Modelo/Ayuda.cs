@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace BitmonGráfico.modelo
+namespace Modelo
 {
-    public class Control
+    public class Ayuda
     {
         public List<Bitmon> disponibles;
-        public Control()
+        public Ayuda()
         {
             disponibles = new List<Bitmon>();
         }
@@ -22,6 +20,6 @@ namespace BitmonGráfico.modelo
             disponibles.Add(Charmon);             disponibles.Add(Bitmeleon);             disponibles.Add(Pikamon);             disponibles.Add(Qwertymon);             disponibles.Add(Squimon);             disponibles.Add(Worbito);             disponibles.Add(Icemon);             disponibles.Add(Dragonice);             disponibles.Add(Tirimon);             disponibles.Add(Naidormon);
         }
 
-       
+
     }
 }

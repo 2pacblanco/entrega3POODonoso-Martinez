@@ -17,7 +17,7 @@ namespace BitmonGráfico
             InitializeComponent();
         }
 
-        modelo.Control wena1 = new modelo.Control();
+        
         
     }
 }
