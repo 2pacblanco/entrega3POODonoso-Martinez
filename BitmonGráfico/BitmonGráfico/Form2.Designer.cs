@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ListaBits = new System.Windows.Forms.ComboBox();
+            this.BotonJugador1Agregar = new System.Windows.Forms.Button();
+            this.BotonJugador2Agregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,21 +44,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Eliga un Bitmon para su equipo!";
             // 
-            // comboBox1
+            // ListaBits
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(37, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(725, 21);
-            this.comboBox1.TabIndex = 1;
-            
+            this.ListaBits.FormattingEnabled = true;
+            this.ListaBits.Location = new System.Drawing.Point(37, 56);
+            this.ListaBits.Name = "ListaBits";
+            this.ListaBits.Size = new System.Drawing.Size(725, 21);
+            this.ListaBits.TabIndex = 1;
+            this.ListaBits.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // BotonJugador1Agregar
+            // 
+            this.BotonJugador1Agregar.Location = new System.Drawing.Point(57, 168);
+            this.BotonJugador1Agregar.Name = "BotonJugador1Agregar";
+            this.BotonJugador1Agregar.Size = new System.Drawing.Size(101, 23);
+            this.BotonJugador1Agregar.TabIndex = 2;
+            this.BotonJugador1Agregar.Text = "Agregar Jugador1";
+            this.BotonJugador1Agregar.UseVisualStyleBackColor = true;
+            this.BotonJugador1Agregar.Click += new System.EventHandler(this.BotonJugador1Agregar_Click);
+            // 
+            // BotonJugador2Agregar
+            // 
+            this.BotonJugador2Agregar.Location = new System.Drawing.Point(470, 168);
+            this.BotonJugador2Agregar.Name = "BotonJugador2Agregar";
+            this.BotonJugador2Agregar.Size = new System.Drawing.Size(101, 23);
+            this.BotonJugador2Agregar.TabIndex = 3;
+            this.BotonJugador2Agregar.Text = "Agregar Jugador2";
+            this.BotonJugador2Agregar.UseVisualStyleBackColor = true;
+            this.BotonJugador2Agregar.Click += new System.EventHandler(this.BotonJugador2Agregar_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.BotonJugador2Agregar);
+            this.Controls.Add(this.BotonJugador1Agregar);
+            this.Controls.Add(this.ListaBits);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -68,6 +92,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ListaBits;
+        private System.Windows.Forms.Button BotonJugador1Agregar;
+        private System.Windows.Forms.Button BotonJugador2Agregar;
     }
 }

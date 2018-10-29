@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Modelo;
 
+//remplazando clase modelo
 
 namespace BitmonGráfico
 {
-    public class Controller
+    class ControllerMdl
     {
+        public ControllerMdl()
+        { }
 
+       // public void agregarEquipo
     }
 }

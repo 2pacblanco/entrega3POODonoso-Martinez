@@ -73,7 +73,7 @@
             this.tb_NameP1.Name = "tb_NameP1";
             this.tb_NameP1.Size = new System.Drawing.Size(245, 17);
             this.tb_NameP1.TabIndex = 3;
-            
+            this.tb_NameP1.TextChanged += new System.EventHandler(this.tb_NameP1_TextChanged);
             // 
             // tb_NameP2
             // 
