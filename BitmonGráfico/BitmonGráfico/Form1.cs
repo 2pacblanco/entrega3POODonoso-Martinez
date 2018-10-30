@@ -12,12 +12,12 @@ using Modelo;
 
 namespace BitmonGráfico
 {
-
     public delegate void agregarJugadorDelegate(string nombre);
 
     public partial class Form1 : Form
     {
         public event agregarJugadorDelegate OnagregarJugador;
+        
         public Form1()
         {
             InitializeComponent();
@@ -31,12 +31,12 @@ namespace BitmonGráfico
                 OnagregarJugador.Invoke(tb_NameP2.Text);
                 
             }
-            MessageBox.Show(tb_NameP1.Text + " y " + tb_NameP2.Text + "ahora se iniciara la eleccion de bitmon para cada equipo");
+            MessageBox.Show(tb_NameP1.Text + " y " + tb_NameP2.Text + " \n" + "Ahora se iniciara la elección de bitmon \npara cada jugador");
             Form2 form2 = new Form2();
+            this.Hide();
             form2.Show();
-
-
-        }       private void tb_NameP1_TextChanged(object sender, EventArgs e)
+        }
+        private void tb_NameP1_TextChanged(object sender, EventArgs e)
         {
 
         }
