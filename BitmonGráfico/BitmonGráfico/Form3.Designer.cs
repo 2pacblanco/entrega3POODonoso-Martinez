@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,11 +47,65 @@
             this.label1.Text = "A continuación, deben elegir sus Bitmons que saldrán en primer lugar a la batalla" +
     "!!";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label2.Location = new System.Drawing.Point(44, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(254, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Jugador 1, eliga su bitmon activo";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AccessibleName = "cbEquipo1";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(338, 81);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(403, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label3.Location = new System.Drawing.Point(54, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(249, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Jugador 2,eliga su bitmon activo";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AccessibleName = "cbEquipo2";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(344, 221);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(396, 21);
+            this.comboBox2.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button1.Location = new System.Drawing.Point(562, 295);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 53);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Ready!!";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 368);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "Form3";
@@ -58,5 +117,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button1;
     }
 }

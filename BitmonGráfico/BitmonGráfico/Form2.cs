@@ -11,13 +11,10 @@ using Modelo;
 
 namespace BitmonGráfico
 {
-    public delegate void agregarEquipoDelegate(List<string> equipo,int  jugador);
     public partial class Form2 : Form
     {
-
-        public event agregarEquipoDelegate AddEquipo;
-        List<string> eq1;
-        List<string> eq2;
+        public static List<string> eq1;
+        public static List<string> eq2;
         List<string> disponibles;
         int contador1, contador2;
         int contadorSeleccion;
@@ -82,14 +79,11 @@ namespace BitmonGráfico
                 MessageBox.Show("No es su turno para elegir bitmon todavia");
             }
             if (contador2 == 4) {
-                MessageBox.Show("La batalla va a comenzar\n \t a LUCHAR!!");
-                if (AddEquipo != null)
-                {
-                    AddEquipo.Invoke(eq2, 2);
-                    AddEquipo.Invoke(eq1, 1);
-                }
-                this.Hide();
+                MessageBox.Show("La batalla va a comenzar\n \t a LUCHAR!!");    
+                Form1.lucha1.AddEquipos(eq1, 1);
+                Form1.lucha1.AddEquipos(eq2, 2);     
                 Form3 form3 = new Form3();
+                this.Hide();
                 form3.Show();
             }       
         }

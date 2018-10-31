@@ -12,11 +12,10 @@ using Modelo;
 
 namespace BitmonGráfico
 {
-    public delegate void agregarJugadorDelegate(string nombre);
 
     public partial class Form1 : Form
     {
-        public event agregarJugadorDelegate OnagregarJugador;
+        public static ControllerLucha lucha1 = new ControllerLucha();
         
         public Form1()
         {
@@ -25,12 +24,9 @@ namespace BitmonGráfico
 
         private void bt_ALuchar_Click(object sender, EventArgs e)
         {
-            if (OnagregarJugador != null)
-            {
-                OnagregarJugador.Invoke(tb_NameP1.Text);
-                OnagregarJugador.Invoke(tb_NameP2.Text);
-                
-            }
+
+            lucha1.OnagregarJugardor(tb_NameP1.Text);
+            lucha1.OnagregarJugardor(tb_NameP2.Text); 
             MessageBox.Show(tb_NameP1.Text + " y " + tb_NameP2.Text + " \n" + "Ahora se iniciara la elección de bitmon \npara cada jugador");
             Form2 form2 = new Form2();
             this.Hide();

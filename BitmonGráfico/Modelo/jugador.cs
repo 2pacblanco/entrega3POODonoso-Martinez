@@ -13,10 +13,9 @@ namespace Modelo
         public string nombre;
         public int id;
 
-        public Jugador(List<Bitmon> bitmons, List<Bitmon> equipo, string nombre, int id)
+        public Jugador(string nombre, int id)
         {
-            this.bitmons = bitmons;
-            this.equipo = equipo;
+            equipo = new List<Bitmon>();
             this.nombre = nombre;
             this.id = id;
         }

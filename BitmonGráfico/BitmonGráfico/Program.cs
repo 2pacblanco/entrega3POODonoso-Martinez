@@ -16,7 +16,7 @@ namespace BitmonGráfico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //ControllerLucha lucha = new ControllerLucha(); falta agregar parametro participante para crear controlador lucha revisar
+            
             //ControllerMdl modelo = new ControllerMdl();
             
             Application.Run(new Form1());
