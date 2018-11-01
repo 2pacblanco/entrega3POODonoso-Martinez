@@ -55,7 +55,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(254, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Jugador 1, eliga su bitmon activo";
+            this.label2.Text = Form1.nombre1+", eliga su bitmon activo";
             // 
             // comboBox1
             // 
@@ -74,7 +74,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(249, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Jugador 2,eliga su bitmon activo";
+            this.label3.Text = Form1.nombre2+",eliga su bitmon activo";
             // 
             // comboBox2
             // 

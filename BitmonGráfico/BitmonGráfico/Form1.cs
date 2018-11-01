@@ -16,6 +16,7 @@ namespace BitmonGráfico
     public partial class Form1 : Form
     {
         public static ControllerLucha lucha1 = new ControllerLucha();
+        public static string nombre1,nombre2;
         
         public Form1()
         {
@@ -24,7 +25,8 @@ namespace BitmonGráfico
 
         private void bt_ALuchar_Click(object sender, EventArgs e)
         {
-
+            nombre1 = tb_NameP1.Text;
+            nombre2 = tb_NameP2.Text;
             lucha1.OnagregarJugardor(tb_NameP1.Text);
             lucha1.OnagregarJugardor(tb_NameP2.Text); 
             MessageBox.Show(tb_NameP1.Text + " y " + tb_NameP2.Text + " \n" + "Ahora se iniciara la elección de bitmon \npara cada jugador");

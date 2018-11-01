@@ -103,5 +103,73 @@ namespace BitmonGráfico
             }
         }
 
+        public Bitmon GetActivo(string nombre_jug)
+        {
+            foreach(Jugador j in lucha.participantes)
+            {
+                if(nombre_jug == j.nombre)
+                {
+                    foreach(Bitmon b in j.equipo)
+                    {
+                        if (b.estadolucha == "activo")
+                        {
+                            return b;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public void Descansar(string nombre_jug)
+        {
+            Bitmon act = GetActivo(nombre_jug);
+
+            act.vida = act.vida + 40;
+            act.stamina = act.stamina + 10;
+
+            foreach(Jugador j in lucha.participantes)
+            {
+                if(j.nombre == nombre_jug)
+                {
+                    foreach(Bitmon b in j.equipo)
+                    {
+                        if(b.nombre == act.nombre)
+                        {
+                            b.vida = act.vida;
+                            b.stamina = act.stamina;
+                            b.estadosalud = null;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void Cambiar(string nombre_jug,string nombre_bit)
+        {
+            foreach(Jugador j in lucha.participantes)
+            {
+                if(nombre_jug == j.nombre)
+                {
+                    foreach(Bitmon b in j.equipo)
+                    {
+                        if (b.estadolucha == "activo")
+                        {
+                            b.estadolucha = null;
+                            break;
+                        }
+                    }
+                    foreach(Bitmon c in j.equipo)
+                    {
+                        if(nombre_bit == c.nombre)
+                        {
+                            c.estadolucha = "activo";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

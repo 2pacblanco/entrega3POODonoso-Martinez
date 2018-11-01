@@ -78,8 +78,7 @@ namespace BitmonGráfico
             {
                 MessageBox.Show("No es su turno para elegir bitmon todavia");
             }
-            if (contador2 == 4) {
-                MessageBox.Show("La batalla va a comenzar\n \t a LUCHAR!!");    
+            if (contador2 == 4) {   
                 Form1.lucha1.AddEquipos(eq1, 1);
                 Form1.lucha1.AddEquipos(eq2, 2);     
                 Form3 form3 = new Form3();
