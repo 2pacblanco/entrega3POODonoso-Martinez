@@ -43,5 +43,10 @@ namespace BitmonGráfico
             this.Hide();
             form5.Show();
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

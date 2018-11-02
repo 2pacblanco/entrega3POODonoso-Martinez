@@ -40,6 +40,7 @@
             this.xcb1.Name = "xcb1";
             this.xcb1.Size = new System.Drawing.Size(406, 21);
             this.xcb1.TabIndex = 0;
+            this.xcb1.SelectedIndexChanged += new System.EventHandler(this.xcb1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -72,6 +73,7 @@
             this.Controls.Add(this.xcb1);
             this.Name = "Form7";
             this.Text = "Form7";
+            this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
