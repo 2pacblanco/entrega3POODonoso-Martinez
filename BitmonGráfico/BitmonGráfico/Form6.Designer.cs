@@ -29,14 +29,20 @@
         private void InitializeComponent()
         {
             this.listAtaques = new System.Windows.Forms.ListBox();
+<<<<<<< HEAD
             this.Atacar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.listStatsAtaques = new System.Windows.Forms.ListBox();
+=======
+            this.BotonAtacar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
             this.SuspendLayout();
             // 
             // listAtaques
             // 
             this.listAtaques.FormattingEnabled = true;
+<<<<<<< HEAD
             this.listAtaques.Location = new System.Drawing.Point(47, 73);
             this.listAtaques.Name = "listAtaques";
             this.listAtaques.Size = new System.Drawing.Size(121, 147);
@@ -52,10 +58,28 @@
             this.Atacar.Text = "Usar Ataque";
             this.Atacar.UseVisualStyleBackColor = true;
             this.Atacar.Click += new System.EventHandler(this.button1_Click);
+=======
+            this.listAtaques.Location = new System.Drawing.Point(236, 89);
+            this.listAtaques.Name = "listAtaques";
+            this.listAtaques.Size = new System.Drawing.Size(379, 186);
+            this.listAtaques.TabIndex = 0;
+            this.listAtaques.SelectedIndexChanged += new System.EventHandler(this.listAtaques_SelectedIndexChanged);
+            // 
+            // BotonAtacar
+            // 
+            this.BotonAtacar.Location = new System.Drawing.Point(236, 315);
+            this.BotonAtacar.Name = "BotonAtacar";
+            this.BotonAtacar.Size = new System.Drawing.Size(75, 23);
+            this.BotonAtacar.TabIndex = 1;
+            this.BotonAtacar.Text = "Usar Ataque";
+            this.BotonAtacar.UseVisualStyleBackColor = true;
+            this.BotonAtacar.Click += new System.EventHandler(this.button1_Click);
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(44, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(291, 13);
@@ -71,14 +95,29 @@
             this.listStatsAtaques.Size = new System.Drawing.Size(199, 147);
             this.listStatsAtaques.TabIndex = 3;
             // 
+=======
+            this.label1.Location = new System.Drawing.Point(233, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Seleccione el ataque y use el boton";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(477, 421);
             this.Controls.Add(this.listStatsAtaques);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Atacar);
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BotonAtacar);
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
             this.Controls.Add(this.listAtaques);
             this.Name = "Form6";
             this.Text = "form6";
@@ -91,8 +130,13 @@
         #endregion
 
         private System.Windows.Forms.ListBox listAtaques;
+<<<<<<< HEAD
         private System.Windows.Forms.Button Atacar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listStatsAtaques;
+=======
+        private System.Windows.Forms.Button BotonAtacar;
+        private System.Windows.Forms.Label label1;
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
     }
 }

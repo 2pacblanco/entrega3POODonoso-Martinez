@@ -91,5 +91,15 @@ namespace BitmonGráfico
             }
             
         }
+
+        private void xcb1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

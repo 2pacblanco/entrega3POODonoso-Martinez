@@ -13,6 +13,7 @@ namespace BitmonGráfico
 {
     public partial class Form6 : Form
     {
+<<<<<<< HEAD
         string atq;
 
         public Form6()
@@ -33,6 +34,22 @@ namespace BitmonGráfico
                 }
             }
             if (Form1.lucha1.lucha.turno == 2)
+=======
+        public Form6()
+        {
+            InitializeComponent();
+            if (Form1.lucha1.lucha.turno ==1)
+            {
+                foreach(Bitmon b in Form1.lucha1.lucha.participantes[0].equipo)
+                {
+                    foreach(Poder p in b.poderes)
+                    {
+                        listAtaques.Items.Add("Nombre : " + p.nombre + "   Danio : " + p.danio + "   Costo : " + p.costo + "   Tipo : " + p.tipo);
+                    }
+                }
+            }
+            if (Form1.lucha1.lucha.turno ==2)
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
             {
                 foreach (Bitmon b in Form1.lucha1.lucha.participantes[1].equipo)
                 {
@@ -40,10 +57,16 @@ namespace BitmonGráfico
                     {
                         foreach (Poder p in b.poderes)
                         {
+<<<<<<< HEAD
                             listAtaques.Items.Add(p.nombre);
                             listStatsAtaques.Items.Add("   Danio : " + p.danio + "   Costo : " + p.costo + "   Tipo : " + p.tipo);
                         }
 
+=======
+                            listAtaques.Items.Add("Nombre : " + p.nombre + "   Danio : " + p.danio + "   Costo : " + p.costo + "   Tipo : " + p.tipo);
+                        }
+                        //listAtaques.DataSource = b.poderes;
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
                     }
                 }
             }
@@ -51,7 +74,11 @@ namespace BitmonGráfico
 
         private void listAtaques_SelectedIndexChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
         }
 
         private void Form6_Load(object sender, EventArgs e)
@@ -61,6 +88,7 @@ namespace BitmonGráfico
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             atq = listAtaques.GetItemText(listAtaques.SelectedItem);
 
             if (Form1.lucha1.lucha.turno == 1)
@@ -130,6 +158,9 @@ namespace BitmonGráfico
                     }
                 }
             }
+=======
+            
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
         }
 
         private void label1_Click(object sender, EventArgs e)

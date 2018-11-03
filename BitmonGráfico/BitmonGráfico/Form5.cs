@@ -125,9 +125,40 @@ namespace BitmonGráfico
 
         private void button3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             this.Hide();
             Form7 form7 = new Form7();
             form7.Show();
+=======
+            if (turno ==1)
+            {
+                
+            }
+            if (turno ==2)
+            {
+
+            }
+            this.Hide();
+                
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form6 form6 = new Form6();
+            form6.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+>>>>>>> 9b00b7dd190965630f52895381a750cb9bdea7e6
         }
 
         private void button4_Click(object sender, EventArgs e)
