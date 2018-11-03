@@ -61,11 +61,22 @@ namespace BitmonGráfico
                 BotonJugador1Agregar.Show();
                 if (contador2 <= 3)
                 {
-                    eq2.Add(ListaBits.SelectedItem.ToString());
-                    MessageBox.Show(ListaBits.SelectedItem.ToString() + " se ha agregado para el equipo del jugador 2");
-                    ListaBits.Items.Remove(ListaBits.SelectedItem.ToString());
-                    contadorSeleccion ++;
-                    contador2++;
+                    try
+                    {
+                        eq2.Add(ListaBits.SelectedItem.ToString());
+                        MessageBox.Show(ListaBits.SelectedItem.ToString() + " se ha agregado para el equipo del jugador " + Form1.nombre2);
+                        ListaBits.Items.Remove(ListaBits.SelectedItem.ToString());
+                        contadorSeleccion++;
+                        contador2++;
+                    }
+                    catch (NullReferenceException)
+                    {
+                        MessageBox.Show("No eligió ningún Bitmon, reiniciando Form...");
+                        this.Hide();
+                        Form2 form2 = new Form2();
+                        form2.Show();
+                    }
+                    
                    
                 }
                 else
@@ -95,11 +106,22 @@ namespace BitmonGráfico
                 BotonJugador2Agregar.Show();
                 if (contador1 <= 3)
                 {
-                    eq1.Add(ListaBits.SelectedItem.ToString());
-                    MessageBox.Show(ListaBits.SelectedItem.ToString() + " se ha agregado para el equipo del jugador 1");
-                    ListaBits.Items.Remove(ListaBits.SelectedItem.ToString());
-                    contadorSeleccion ++;
-                    contador1++;
+                    try
+                    {
+                        eq1.Add(ListaBits.SelectedItem.ToString());
+                        MessageBox.Show(ListaBits.SelectedItem.ToString() + " se ha agregado para el equipo del jugador " + Form1.nombre1);
+                        ListaBits.Items.Remove(ListaBits.SelectedItem.ToString());
+                        contadorSeleccion++;
+                        contador1++;
+                    }
+                    catch (NullReferenceException)
+                    {
+                        MessageBox.Show("No eligió ningún Bitmon, reiniciando form...");
+                        this.Hide();
+                        Form2 form2 = new Form2();
+                        form2.Show();
+                    }
+                    
                 }
                 else
                 {

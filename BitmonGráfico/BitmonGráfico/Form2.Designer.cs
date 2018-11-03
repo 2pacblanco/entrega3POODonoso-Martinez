@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(833, 274);
             this.Controls.Add(this.BotonJugador2Agregar);
             this.Controls.Add(this.BotonJugador1Agregar);
             this.Controls.Add(this.ListaBits);

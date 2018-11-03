@@ -1,6 +1,6 @@
 ﻿namespace BitmonGráfico
 {
-    partial class Form7
+    partial class Form8
     {
         /// <summary>
         /// Required designer variable.
@@ -28,60 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.xcb1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // xcb1
-            // 
-            this.xcb1.FormattingEnabled = true;
-            this.xcb1.Location = new System.Drawing.Point(41, 61);
-            this.xcb1.Name = "xcb1";
-            this.xcb1.Size = new System.Drawing.Size(406, 21);
-            this.xcb1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label1.Location = new System.Drawing.Point(42, 24);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label1.Location = new System.Drawing.Point(95, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bitmons disponibles para cambio";
+            this.label1.Size = new System.Drawing.Size(602, 62);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "EL JUGADOR 1 ES EL GANADOR \nDE ESTA ÉPICA BATALLA, FELICITACIONES!!";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button1.Location = new System.Drawing.Point(151, 161);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button1.Location = new System.Drawing.Point(275, 175);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 44);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cambiar";
+            this.button1.Size = new System.Drawing.Size(279, 62);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Salir";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(43, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(403, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // Form7
+            // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 217);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(815, 278);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.xcb1);
-            this.Name = "Form7";
-            this.Text = "Form7";
+            this.Name = "Form8";
+            this.Text = "Form8";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,9 +69,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox xcb1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

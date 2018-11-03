@@ -35,11 +35,22 @@ namespace BitmonGráfico
             string nombre_b1 = comboBox1.Text;
             string nombre_b2 = comboBox2.Text;
 
-            Form1.lucha1.AddActivo(nombre_b1, nombre_b2);
+            if(nombre_b1 == "" || nombre_b2 == "")
+            {
+                MessageBox.Show("Opción inválida, reiniciando Form!!");
+                this.Hide();
+                Form3 form3 = new Form3();
+                form3.Show();
+            }
+            else
+            {
+                Form1.lucha1.AddActivo(nombre_b1, nombre_b2);
+                Form4 form4 = new Form4();
+                this.Hide();
+                form4.Show();
+            }
 
-            Form4 form4 = new Form4();
-            this.Hide();
-            form4.Show();
+            
         }
     }
 }
