@@ -249,29 +249,7 @@ namespace BitmonGráfico
                 }
             }
         }
-        /*
-        public Poder GetAtaquesAct(string nombre_jug)
-        {
-            Bitmon act = GetActivo(nombre_jug);
-            
-            foreach(Jugador j in lucha.participantes)
-            {
-                if(j.nombre == nombre_jug)
-                {
-                    foreach(Bitmon b in j.equipo)
-                    {
-                        if (b.estadolucha == "activo")
-                        {
-                            foreach(Poder p in b.poderes)
-                            {
-                                return p;
-                            }
-                        }
-                    }
-                }
-            }
-            
-        } */
+       
         
 
         public void Neutro1()

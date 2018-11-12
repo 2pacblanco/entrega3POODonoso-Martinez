@@ -17,13 +17,17 @@ namespace BitmonGráfico
         public Form6()
         {
             InitializeComponent();
+            int contATK = 2;
             if (Form1.lucha1.lucha.turno ==1)
             {
                 foreach(Bitmon b in Form1.lucha1.lucha.participantes[0].equipo)
                 {
-                    foreach(Poder p in b.poderes)
+                    if (b.estadolucha == "activo")
                     {
-                        listAtaques.Items.Add("Nombre : " + p.nombre + "   Danio : " + p.danio + "   Costo : " + p.costo + "   Tipo : " + p.tipo);
+                        foreach (Poder p in b.poderes)
+                        {
+                            listAtaques.Items.Add(p.nombre);                                           
+                        }
                     }
                 }
             }
@@ -35,7 +39,7 @@ namespace BitmonGráfico
                     {
                         foreach (Poder p in b.poderes)
                         {
-                            listAtaques.Items.Add("Nombre : " + p.nombre + "   Danio : " + p.danio + "   Costo : " + p.costo + "   Tipo : " + p.tipo);
+                            listAtaques.Items.Add(p.nombre);
                         }
                     }
                 }
@@ -53,70 +57,77 @@ namespace BitmonGráfico
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            atq = listAtaques.GetItemText(listAtaques.SelectedItem);
-
-            if (Form1.lucha1.lucha.turno == 1)
+            
+            
+            if (listAtaques.SelectedItem == null)
             {
-                foreach (Bitmon b in Form1.lucha1.lucha.participantes[0].equipo)
+                MessageBox.Show("seleccione un ataque");
+            }
+            else
+            {
+                atq = listAtaques.GetItemText(listAtaques.SelectedItem);
+                if (Form1.lucha1.lucha.turno == 1)
                 {
-                    if (b.estadolucha == "activo")
+                    foreach (Bitmon b in Form1.lucha1.lucha.participantes[0].equipo)
                     {
-                        foreach (Poder p in b.poderes)
+                        if (b.estadolucha == "activo")
                         {
-
-                            if (atq == p.nombre)
+                            foreach (Poder p in b.poderes)
                             {
-                                Form1.lucha1.GetActivo(Form1.nombre2);
-                                Form1.lucha1.Ataca(Form1.lucha1.GetActivo(Form1.nombre2), p, Form1.nombre1);
-                                Form1.lucha1.lucha.turno = 2;
-                                if (Form1.lucha1.Verify(Form1.lucha1.lucha.turno) == true)
-                                {
-                                    this.Hide();
-                                    Form5 form5 = new Form5();
-                                    form5.Show();
-                                }
 
-                                if (Form1.lucha1.Verify(Form1.lucha1.lucha.turno) == false)
+                                if (atq == p.nombre)
                                 {
-                                    this.Hide();
-                                    Form8 form8 = new Form8();
-                                    form8.Show();
+                                    Form1.lucha1.GetActivo(Form1.nombre2);
+                                    Form1.lucha1.Ataca(Form1.lucha1.GetActivo(Form1.nombre2), p, Form1.nombre1);
+                                    Form1.lucha1.lucha.turno = 2;
+                                    if (Form1.lucha1.Verify(Form1.lucha1.lucha.turno) == true)
+                                    {
+                                        this.Hide();
+                                        Form5 form5 = new Form5();
+                                        form5.Show();
+                                    }
+
+                                    if (Form1.lucha1.Verify(Form1.lucha1.lucha.turno) == false)
+                                    {
+                                        this.Hide();
+                                        Form8 form8 = new Form8();
+                                        form8.Show();
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-            if (Form1.lucha1.lucha.turno == 2)
-            {
-                foreach (Bitmon b in Form1.lucha1.lucha.participantes[1].equipo)
+                if (Form1.lucha1.lucha.turno == 2)
                 {
-                    if (b.estadolucha == "activo")
+                    foreach (Bitmon b in Form1.lucha1.lucha.participantes[1].equipo)
                     {
-                        foreach (Poder p in b.poderes)
+                        if (b.estadolucha == "activo")
                         {
-
-                            if (atq == p.nombre)
+                            foreach (Poder p in b.poderes)
                             {
-                                Form1.lucha1.GetActivo(Form1.nombre1);
-                                Form1.lucha1.Ataca(Form1.lucha1.GetActivo(Form1.nombre1), p, Form1.nombre2);
-                                
-                                Form1.lucha1.lucha.turno = 1;
-                                
 
-                                if (Form1.lucha1.Verify(Form1.lucha1.lucha.turno) == true)
+                                if (atq == p.nombre)
                                 {
-                                    this.Hide();
-                                    Form5 form5 = new Form5();
-                                    form5.Show();
-                                }
+                                    Form1.lucha1.GetActivo(Form1.nombre1);
+                                    Form1.lucha1.Ataca(Form1.lucha1.GetActivo(Form1.nombre1), p, Form1.nombre2);
 
-                                if (Form1.lucha1.Verify(Form1.lucha1.lucha.turno) == false)
-                                {
-                                    this.Hide();
-                                    Form8 form8 = new Form8();
-                                    form8.Show();
+                                    Form1.lucha1.lucha.turno = 1;
+
+
+                                    if (Form1.lucha1.Verify(Form1.lucha1.lucha.turno) == true)
+                                    {
+                                        this.Hide();
+                                        Form5 form5 = new Form5();
+                                        form5.Show();
+                                    }
+
+                                    if (Form1.lucha1.Verify(Form1.lucha1.lucha.turno) == false)
+                                    {
+                                        this.Hide();
+                                        Form8 form8 = new Form8();
+                                        form8.Show();
+                                    }
                                 }
                             }
                         }
@@ -126,6 +137,16 @@ namespace BitmonGráfico
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listStatsAtaques_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelATK1_Click(object sender, EventArgs e)
         {
 
         }

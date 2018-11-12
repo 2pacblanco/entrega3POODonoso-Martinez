@@ -183,5 +183,10 @@ namespace BitmonGráfico
             Form8 form8 = new Form8();
             form8.Show();
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
