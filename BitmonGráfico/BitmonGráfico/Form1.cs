@@ -21,6 +21,7 @@ namespace BitmonGráfico
         public Form1()
         {
             InitializeComponent();
+            pictureBox1.Image = Image.FromFile("C:\\Users\\usuario\\Desktop\\entrega3POODonoso-Martinez\\Imagenes\\bitmon_stadium.jpeg");
         }
 
         private void bt_ALuchar_Click(object sender, EventArgs e)

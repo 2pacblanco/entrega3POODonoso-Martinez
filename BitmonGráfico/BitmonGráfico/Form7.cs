@@ -25,7 +25,7 @@ namespace BitmonGráfico
                 {
                     if (b.estadolucha != "activo" && b.estadolucha!= "muerto" )
                     {
-                        xcb1.Items.Add(b.nombre);
+                        xcb1.Items.Add(b);
                     }
                 }
                 turno = Form1.lucha1.lucha.turno;
@@ -37,7 +37,7 @@ namespace BitmonGráfico
                 {
                     if (b.estadolucha != "activo" && b.estadolucha!= "muerto" )
                     {
-                        comboBox1.Items.Add(b.nombre);
+                        comboBox1.Items.Add(b);
                     }
                 }
                 turno = Form1.lucha1.lucha.turno;
@@ -49,7 +49,7 @@ namespace BitmonGráfico
         {
             if (turno == 1)
             {
-                if(xcb1.Text == "")
+                if(xcb1.SelectedItem == null)
                 {
                     MessageBox.Show("Opción inválida, ingrésela nuevamente porfavor!!");
                     this.Hide();
@@ -59,7 +59,8 @@ namespace BitmonGráfico
                 else
                 {
                     Form1.lucha1.Neutro1();
-                    Form1.lucha1.Cambiar1(xcb1.Text);
+                    Bitmon ca = (Bitmon)xcb1.SelectedItem;
+                    Form1.lucha1.Cambiar1(ca.nombre);
                     Form1.lucha1.lucha.turno = 2;
                     MessageBox.Show("Bitmon cambiado con éxito!!");
                     Form5 form51 = new Form5();
@@ -70,7 +71,7 @@ namespace BitmonGráfico
             }
             if (turno == 2)
             {
-                if (comboBox1.Text == "")
+                if (comboBox1.SelectedItem == null)
                 {
                     MessageBox.Show("Opción inválida, ingrésela nuevamente porfavor!!");
                     this.Hide();
@@ -80,8 +81,8 @@ namespace BitmonGráfico
                 else
                 {
                     Form1.lucha1.Neutro2();
-                    Form1.lucha1.Cambiar2(comboBox1.Text);
-                    Form1.lucha1.lucha.turno = 1;
+                    Bitmon co = (Bitmon)comboBox1.SelectedItem;
+                    Form1.lucha1.Cambiar2(co.nombre);
                     MessageBox.Show("Bitmon cambiado con éxito!!");
                     Form5 form51 = new Form5();
                     this.Hide();

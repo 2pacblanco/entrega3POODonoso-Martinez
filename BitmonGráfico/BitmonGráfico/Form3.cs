@@ -20,11 +20,11 @@ namespace BitmonGráfico
             List<Bitmon> eq1 = new List<Bitmon>();
             List<Bitmon> eq2 = new List<Bitmon>(); 
             
-            foreach (string s in Form2.eq1)
+            foreach (Bitmon s in Form2.eq1)
             {
                 comboBox1.Items.Add(s);
             }
-            foreach (string s in Form2.eq2)
+            foreach (Bitmon s in Form2.eq2)
             {
                 comboBox2.Items.Add(s);
             }
@@ -32,10 +32,10 @@ namespace BitmonGráfico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nombre_b1 = comboBox1.Text;
-            string nombre_b2 = comboBox2.Text;
+            Bitmon nombre_b1 = (Bitmon)comboBox1.SelectedItem;
+            Bitmon nombre_b2 = (Bitmon)comboBox2.SelectedItem;
 
-            if(nombre_b1 == "" || nombre_b2 == "")
+            if(nombre_b1 == null || nombre_b2 == null)
             {
                 MessageBox.Show("Opción inválida, reiniciando Form!!");
                 this.Hide();
@@ -44,7 +44,7 @@ namespace BitmonGráfico
             }
             else
             {
-                Form1.lucha1.AddActivo(nombre_b1, nombre_b2);
+                Form1.lucha1.AddActivo(nombre_b1.nombre, nombre_b2.nombre);
                 Form4 form4 = new Form4();
                 this.Hide();
                 form4.Show();

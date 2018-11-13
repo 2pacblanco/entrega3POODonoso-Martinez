@@ -22,5 +22,10 @@ namespace Modelo
             this.poderes = poderes;
             this.estadosalud = estadosalud;
         }
+
+        public override string ToString()
+        {
+            return $"Nombre = {nombre}   Vida= {Convert.ToString(vida)}   Tipo= {tipo}";
+        }
     }
 }

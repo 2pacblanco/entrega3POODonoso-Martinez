@@ -17,5 +17,10 @@ namespace Modelo
             this.ulti = ulti;
             this.nombre = nombre;
         }
+
+        public override string ToString()
+        {
+            return "Nombre: " + nombre + "   Danio: " + Convert.ToString(danio) + "   Costo: " + Convert.ToString(costo) + "   Tipo: " + tipo+"Ulti: "+ulti;
+        }
     }
 }

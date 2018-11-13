@@ -21,10 +21,15 @@ namespace BitmonGráfico
             {
                 foreach(Bitmon b in Form1.lucha1.lucha.participantes[0].equipo)
                 {
-                    foreach(Poder p in b.poderes)
+                    if(b.estadolucha == "activo")
                     {
-                        listAtaques.Items.Add("Nombre : " + p.nombre + "   Danio : " + p.danio + "   Costo : " + p.costo + "   Tipo : " + p.tipo);
+                        label2.Text = "Poderes disponibles de " + b.nombre;
+                        foreach (Poder p in b.poderes)
+                        {
+                            listAtaques.Items.Add(p);
+                        }
                     }
+                    
                 }
             }
             if (Form1.lucha1.lucha.turno ==2)
@@ -33,28 +38,23 @@ namespace BitmonGráfico
                 {
                     if (b.estadolucha == "activo")
                     {
+                        label2.Text = "Poderes disponibles de " + b.nombre;
                         foreach (Poder p in b.poderes)
                         {
-                            listAtaques.Items.Add("Nombre : " + p.nombre + "   Danio : " + p.danio + "   Costo : " + p.costo + "   Tipo : " + p.tipo);
+                            listAtaques.Items.Add(p);
                         }
                     }
                 }
             }
         }
 
-        private void listAtaques_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void Form6_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            atq = listAtaques.GetItemText(listAtaques.SelectedItem);
+            Poder pi = (Poder)listAtaques.SelectedItem;
+            atq = listAtaques.GetItemText(pi.nombre);
 
             if (Form1.lucha1.lucha.turno == 1)
             {

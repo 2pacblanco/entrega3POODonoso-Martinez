@@ -57,9 +57,9 @@
             // 
             this.BotonJugador1Agregar.Location = new System.Drawing.Point(214, 152);
             this.BotonJugador1Agregar.Name = "BotonJugador1Agregar";
-            this.BotonJugador1Agregar.Size = new System.Drawing.Size(101, 55);
+            this.BotonJugador1Agregar.Size = new System.Drawing.Size(101, 87);
             this.BotonJugador1Agregar.TabIndex = 2;
-            this.BotonJugador1Agregar.Text = "Agregar a Equipo \nde "+Form1.nombre1;
+            this.BotonJugador1Agregar.Text = "Agregar a Equipo \nde \n"+Form1.nombre1;
             this.BotonJugador1Agregar.UseVisualStyleBackColor = true;
             this.BotonJugador1Agregar.Click += new System.EventHandler(this.BotonJugador1Agregar_Click);
             // 
@@ -67,9 +67,9 @@
             // 
             this.BotonJugador2Agregar.Location = new System.Drawing.Point(478, 152);
             this.BotonJugador2Agregar.Name = "BotonJugador2Agregar";
-            this.BotonJugador2Agregar.Size = new System.Drawing.Size(101, 55);
+            this.BotonJugador2Agregar.Size = new System.Drawing.Size(101, 87);
             this.BotonJugador2Agregar.TabIndex = 3;
-            this.BotonJugador2Agregar.Text = "Agregar a Equipo \nde "+Form1.nombre2;
+            this.BotonJugador2Agregar.Text = "Agregar a Equipo \nde \n "+Form1.nombre2;
             this.BotonJugador2Agregar.UseVisualStyleBackColor = true;
             this.BotonJugador2Agregar.Click += new System.EventHandler(this.BotonJugador2Agregar_Click);
             // 
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 274);
+            this.ClientSize = new System.Drawing.Size(829, 332);
             this.Controls.Add(this.BotonJugador2Agregar);
             this.Controls.Add(this.BotonJugador1Agregar);
             this.Controls.Add(this.ListaBits);

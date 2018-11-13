@@ -29,72 +29,60 @@
         private void InitializeComponent()
         {
             this.listAtaques = new System.Windows.Forms.ListBox();
-            this.Atacar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.listStatsAtaques = new System.Windows.Forms.ListBox();
             this.BotonAtacar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listAtaques
             // 
             this.listAtaques.FormattingEnabled = true;
-            this.listAtaques.Location = new System.Drawing.Point(236, 89);
+            this.listAtaques.Location = new System.Drawing.Point(55, 111);
             this.listAtaques.Name = "listAtaques";
             this.listAtaques.Size = new System.Drawing.Size(379, 186);
             this.listAtaques.TabIndex = 0;
-            this.listAtaques.SelectedIndexChanged += new System.EventHandler(this.listAtaques_SelectedIndexChanged);
-            // 
-            // Atacar
-            // 
-            this.Atacar.Location = new System.Drawing.Point(112, 305);
-            this.Atacar.Name = "Atacar";
-            this.Atacar.Size = new System.Drawing.Size(75, 23);
-            this.Atacar.TabIndex = 1;
-            this.Atacar.Text = "Usar Ataque";
-            this.Atacar.UseVisualStyleBackColor = true;
-            this.Atacar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(233, 32);
+            this.label1.Location = new System.Drawing.Point(52, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccione el ataque y use el boton";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // listStatsAtaques
-            // 
-            this.listStatsAtaques.FormattingEnabled = true;
-            this.listStatsAtaques.Location = new System.Drawing.Point(31, 89);
-            this.listStatsAtaques.Name = "listStatsAtaques";
-            this.listStatsAtaques.Size = new System.Drawing.Size(199, 147);
-            this.listStatsAtaques.TabIndex = 3;
-            // 
             // BotonAtacar
             // 
-            this.BotonAtacar.Location = new System.Drawing.Point(285, 305);
+            this.BotonAtacar.Location = new System.Drawing.Point(555, 210);
             this.BotonAtacar.Name = "BotonAtacar";
-            this.BotonAtacar.Size = new System.Drawing.Size(75, 23);
+            this.BotonAtacar.Size = new System.Drawing.Size(133, 87);
             this.BotonAtacar.TabIndex = 1;
             this.BotonAtacar.Text = "Usar Ataque";
             this.BotonAtacar.UseVisualStyleBackColor = true;
             this.BotonAtacar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label2.Location = new System.Drawing.Point(51, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 24);
+            this.label2.TabIndex = 3;
+
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listStatsAtaques);
-            this.Controls.Add(this.Atacar);
+            this.ClientSize = new System.Drawing.Size(807, 340);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BotonAtacar);
             this.Controls.Add(this.listAtaques);
             this.Name = "Form6";
             this.Text = "form6";
-            this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,10 +91,8 @@
         #endregion
 
         private System.Windows.Forms.ListBox listAtaques;
-
-        private System.Windows.Forms.Button Atacar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listStatsAtaques;
         private System.Windows.Forms.Button BotonAtacar;
+        private System.Windows.Forms.Label label2;
     }
 }

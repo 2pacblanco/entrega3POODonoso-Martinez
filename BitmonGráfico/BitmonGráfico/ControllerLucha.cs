@@ -148,41 +148,15 @@ namespace BitmonGráfico
             }
         }
 
-        public void AddEquipos(List<string> nombres,int jugador)
+        public void AddEquipos(List<Bitmon> nombres, int jugador)
         {
             if (jugador == 1)
             {
-                foreach(string nombre in nombres)
-                {
-                    foreach(Bitmon b in allbitmons)
-                    {
-                        if(nombre == b.nombre)
-                        {
-                            lucha.participantes[0].equipo.Add(b);
-                        }
-                        else
-                        {
-                            continue;
-                        }
-                    }
-                }
+                lucha.participantes[0].equipo = nombres;
             }
             if (jugador == 2)
             {
-                foreach (string nombre in nombres)
-                {
-                    foreach (Bitmon b in allbitmons)
-                    {
-                        if (nombre == b.nombre)
-                        {
-                            lucha.participantes[1].equipo.Add(b);
-                        }
-                        else
-                        {
-                            continue;
-                        }
-                    }
-                }
+                lucha.participantes[1].equipo = nombres;
             }
         }
 

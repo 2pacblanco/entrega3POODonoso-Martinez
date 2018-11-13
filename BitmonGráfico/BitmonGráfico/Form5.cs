@@ -35,6 +35,12 @@ namespace BitmonGráfico
             Bitmon act1 = Form1.lucha1.GetActivo(Form1.nombre1);
             Bitmon act2 = Form1.lucha1.GetActivo(Form1.nombre2);
 
+            string ruta1 = "C:\\Users\\usuario\\Desktop\\entrega3POODonoso-Martinez\\Imagenes\\"+act1.nombre+".PNG";
+            string ruta2 = "C:\\Users\\usuario\\Desktop\\entrega3POODonoso-Martinez\\Imagenes\\" + act2.nombre + ".PNG";
+
+            pictureBox1.Image = Image.FromFile(ruta1);
+            pictureBox2.Image = Image.FromFile(ruta2);
+
             if (turno == 1)
             {
                 if (act1.vida == 0)
@@ -128,15 +134,6 @@ namespace BitmonGráfico
             this.Hide();
             Form7 form7 = new Form7();
             form7.Show();
-
-            if (turno ==1)
-            {
-                
-            }
-            if (turno ==2)
-            {
-
-            }
             this.Hide();
                          
         }
@@ -170,12 +167,11 @@ namespace BitmonGráfico
                 if (Form1.lucha1.lucha.turno == 1) 
                 {
                     Form1.lucha1.Rendirse(Form1.nombre1);
-                    Form1.lucha1.lucha.turno = 2;
+
                 }
                 if (Form1.lucha1.lucha.turno == 2)
                 {
                     Form1.lucha1.Rendirse(Form1.nombre2);
-                    Form1.lucha1.lucha.turno = 1;
                 } 
             }
 

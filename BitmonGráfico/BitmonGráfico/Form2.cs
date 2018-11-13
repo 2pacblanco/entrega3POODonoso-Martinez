@@ -13,36 +13,24 @@ namespace BitmonGráfico
 {
     public partial class Form2 : Form
     {
-        public static List<string> eq1;
-        public static List<string> eq2;
-        List<string> disponibles;
+        public static List<Bitmon> eq1;
+        public static List<Bitmon> eq2;
+        public List<Bitmon> disponibles;
         int contador1, contador2;
         int contadorSeleccion;
 
         public Form2()
         {
             InitializeComponent();
-            eq1 = new List<string>();
-            eq2 = new List<string>();
-            disponibles = new List<string>();
+            eq1 = new List<Bitmon>();
+            eq2 = new List<Bitmon>();
+            disponibles = Form1.lucha1.allbitmons;
             contador1 = 1;
             contador2 = 1;
             contadorSeleccion = 1;
             BotonJugador2Agregar.Hide();
 
-            disponibles.Add("Charmon");
-            disponibles.Add("Bitmeleon");
-            disponibles.Add("Pikamon");
-            disponibles.Add("Qwertymon");
-            disponibles.Add("Squimon");
-            disponibles.Add("Worbito");
-            disponibles.Add("Icemon");
-            disponibles.Add("Dragonice");
-            disponibles.Add("Tirimon");
-            disponibles.Add("Naidormon");
-
-        
-            foreach (string b in disponibles)
+            foreach (Bitmon b in disponibles)
             {
                 ListaBits.Items.Add(b);
             }
@@ -63,9 +51,10 @@ namespace BitmonGráfico
                 {
                     try
                     {
-                        eq2.Add(ListaBits.SelectedItem.ToString());
-                        MessageBox.Show(ListaBits.SelectedItem.ToString() + " se ha agregado para el equipo del jugador " + Form1.nombre2);
-                        ListaBits.Items.Remove(ListaBits.SelectedItem.ToString());
+                        Bitmon c = (Bitmon)ListaBits.SelectedItem;
+                        eq2.Add(c);
+                        MessageBox.Show(c.nombre+ " se ha agregado para el equipo del jugador " + Form1.nombre2);
+                        ListaBits.Items.Remove(ListaBits.SelectedItem);
                         contadorSeleccion++;
                         contador2++;
                     }
@@ -90,8 +79,8 @@ namespace BitmonGráfico
                 MessageBox.Show("No es su turno para elegir bitmon todavia");
             }
             if (contador2 == 4) {   
-                Form1.lucha1.AddEquipos(eq1, 1);
-                Form1.lucha1.AddEquipos(eq2, 2);     
+                Form1.lucha1.AddEquipos(eq1,1);
+                Form1.lucha1.AddEquipos(eq2,2);     
                 Form3 form3 = new Form3();
                 this.Hide();
                 form3.Show();
@@ -108,9 +97,10 @@ namespace BitmonGráfico
                 {
                     try
                     {
-                        eq1.Add(ListaBits.SelectedItem.ToString());
-                        MessageBox.Show(ListaBits.SelectedItem.ToString() + " se ha agregado para el equipo del jugador " + Form1.nombre1);
-                        ListaBits.Items.Remove(ListaBits.SelectedItem.ToString());
+                        Bitmon b = (Bitmon)ListaBits.SelectedItem;
+                        eq1.Add(b);
+                        MessageBox.Show(b.nombre + " se ha agregado para el equipo del jugador " + Form1.nombre2);
+                        ListaBits.Items.Remove(ListaBits.SelectedItem);
                         contadorSeleccion++;
                         contador1++;
                     }
